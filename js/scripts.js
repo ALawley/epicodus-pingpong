@@ -1,5 +1,5 @@
 var pingPong = function(loopedNumber) {
-  if (loopedNumber % 3 === 0 && loopedNumber % 5 === 0) {
+  if (loopedNumber % 15 === 0) {
     return "pingpong";
   } else if (loopedNumber % 5 === 0){
     return "pong";
