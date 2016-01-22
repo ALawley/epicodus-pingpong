@@ -38,6 +38,9 @@ describe ('primes', function() {
   it("will return true if number is prime", function () {
     expect(primes(23)).to.equal(true);
   });
+  it("will return false for all negatives", function() {
+    expect(primes( -5)).to.equal(false);
+  });
 });
 
 

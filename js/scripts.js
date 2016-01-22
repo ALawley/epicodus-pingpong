@@ -25,8 +25,8 @@ var pingPongLoop = function(number) {
     for (var index = -1; index >= number; index -= 1) {
       resultArray.push(pingPong(index));
     }
-  } else {
-    for (var index = 1; index <= number; index += 1) {
+  } else if (number > 0){
+    for (var index = 1; index <= number && index <= 1000; index += 1) {
       resultArray.push(pingPong(index));
     }
   }
@@ -70,6 +70,7 @@ var sieve = function(number) {
   });
   return allNumbers;
 }
+
 // Front end code. Gets the user input and runs that number through pingPongLoop, printing each item in the resulting array as a list item.
 $(document).ready(function() {
   $("form#ping-pong").submit(function(event) {
