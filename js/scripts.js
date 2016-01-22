@@ -3,12 +3,18 @@
 var pingPong = function(loopedNumber) {
   if (loopedNumber % 15 === 0) {
     return "pingpong";
+  } else if (loopedNumber === 5){
+    return "pong - prime";
+  } else if (loopedNumber === 3) {
+    return "ping - prime";
   } else if (loopedNumber % 5 === 0){
     return "pong";
   } else if (loopedNumber % 3 === 0) {
     return "ping";
+  } else if (primes(loopedNumber)){
+  return loopedNumber + " - prime";
   } else {
-  return loopedNumber;
+    return loopedNumber;
   }
 };
 
