@@ -17,3 +17,14 @@ var pingPongLoop = function(number) {
   }
   return resultArray;
 };
+
+$(document).ready(function() {
+  $("form#ping-pong").submit(function(event) {
+    $("result-list").remove();
+    var number = parseInt($("input#number").val());
+    pingPongLoop(number).forEach(function(result) {
+      $("ul#result-list").append("<li>" + result + "</li>");
+    });
+    event.preventDefault();
+  });
+});
