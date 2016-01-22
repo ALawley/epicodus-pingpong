@@ -28,7 +28,7 @@ var pingPongLoop = function(number) {
 };
 
 var primes = function(number) {
-  if (contains(sieve(number))) {
+  if (contains(sieve(number), number)) {
     return true;
   } else {
     return false;

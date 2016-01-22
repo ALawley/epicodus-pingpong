@@ -37,12 +37,12 @@ describe ('contains', function() {
     expect(contains([1, 2, 3, 4], 5)).to.equal(false);
   });
   it("will return true if array does not contain the input", function () {
-    expect(contains([1, 2, 3, 4], 3)).to.equal(true);
+    expect(contains([2, 3, 5, 7, 11, 13, 17, 19, 23], 23)).to.equal(true);
   });
 })
 
 describe ('sieve', function() {
   it("will give array of all primes up to number", function () {
-    expect(sieve(22)).to.eql([2, 3, 5, 7, 11, 13, 17, 19]);
+    expect(sieve(23)).to.eql([2, 3, 5, 7, 11, 13, 17, 19, 23]);
   });
 });
