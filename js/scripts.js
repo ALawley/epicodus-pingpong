@@ -20,10 +20,10 @@ var pingPongLoop = function(number) {
 
 $(document).ready(function() {
   $("form#ping-pong").submit(function(event) {
-    $("result-list").remove();
+    $(".list-result").remove();
     var number = parseInt($("input#number").val());
     pingPongLoop(number).forEach(function(result) {
-      $("ul#result-list").append("<li>" + result + "</li>");
+      $("ul#result-list").append("<li class='list-result'>" + result + "</li>");
     });
     event.preventDefault();
   });
