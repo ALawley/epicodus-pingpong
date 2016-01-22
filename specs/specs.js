@@ -15,9 +15,15 @@ describe ('pingPong', function () {
 
 describe ('pingPongLoop', function() {
   it("will aggregate into an array all pingPong results from 1 to the input number", function() {
-    expect(pingPongLoop(15)).to.eql([1, 2, "ping", 4, "pong", "ping", 7, 8, "ping", "pong", 11, "ping", 13, 14, "pingpong"])
+    expect(pingPongLoop(15)).to.eql([1, 2, "ping", 4, "pong", "ping", 7, 8, "ping", "pong", 11, "ping", 13, 14, "pingpong"]);
   });
   it("will handle negative numbers appropraitely", function() {
-    expect(pingPongLoop( -15)).to.eql([-1, -2, "ping", -4, "pong", "ping", -7, -8, "ping", "pong", -11, "ping", -13, -14, "pingpong"])
+    expect(pingPongLoop( -15)).to.eql([-1, -2, "ping", -4, "pong", "ping", -7, -8, "ping", "pong", -11, "ping", -13, -14, "pingpong"]);
+  });
+});
+
+describe ('primes', function() {
+  it("will return false if number is not prime", function () {
+    expect(prime(22)).to.eql(false);
   });
 });

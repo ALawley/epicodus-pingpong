@@ -38,3 +38,7 @@ $(document).ready(function() {
     event.preventDefault();
   });
 });
+
+var prime = function(number) {
+  return false;
+}
