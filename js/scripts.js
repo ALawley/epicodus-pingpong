@@ -1,3 +1,5 @@
+
+// Determines whether a number is ping, pong, pingpong, or none of the above and returns that result
 var pingPong = function(loopedNumber) {
   if (loopedNumber % 15 === 0) {
     return "pingpong";
@@ -10,6 +12,7 @@ var pingPong = function(loopedNumber) {
   }
 };
 
+// Runs the pingPong function on all numbers from 1 to the input number and collects those results into an array.
 var pingPongLoop = function(number) {
   var resultArray = [];
   if (number < 0) {
@@ -24,6 +27,7 @@ var pingPongLoop = function(number) {
   return resultArray;
 };
 
+// Front end code. Gets the user input and runs that number through pingPongLoop, printing each item in the resulting array as a list item.
 $(document).ready(function() {
   $("form#ping-pong").submit(function(event) {
     $(".list-result").remove();
