@@ -1,11 +1,19 @@
-var pingPong = function(number) {
-  if (number % 3 === 0 && number % 5 === 0) {
+var pingPong = function(loopedNumber) {
+  if (loopedNumber % 3 === 0 && loopedNumber % 5 === 0) {
     return "pingpong";
-  } else if (number % 5 === 0){
+  } else if (loopedNumber % 5 === 0){
     return "pong";
-  } else if (number % 3 === 0) {
+  } else if (loopedNumber % 3 === 0) {
     return "ping";
   } else {
-  return number;
+  return loopedNumber;
   }
+};
+
+var pingPongLoop = function(number) {
+  var resultArray = [];
+  for (var index = 1; index <= number; index += 1) {
+    resultArray.push(pingPong(index));
+  }
+  return resultArray;
 };
