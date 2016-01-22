@@ -12,8 +12,14 @@ var pingPong = function(loopedNumber) {
 
 var pingPongLoop = function(number) {
   var resultArray = [];
-  for (var index = 1; index <= number; index += 1) {
-    resultArray.push(pingPong(index));
+  if (number < 0) {
+    for (var index = -1; index >= number; index -= 1) {
+      resultArray.push(pingPong(index));
+    }
+  } else {
+    for (var index = 1; index <= number; index += 1) {
+      resultArray.push(pingPong(index));
+    }
   }
   return resultArray;
 };
