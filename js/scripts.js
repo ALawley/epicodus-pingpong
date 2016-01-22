@@ -1,5 +1,5 @@
 
-// Determines whether a number is ping, pong, pingpong, or none of the above and returns that result
+// Determines whether a number is ping, pong, pingpong, or none of the above and returns that result, as well as whether or not the number is prime.
 var pingPong = function(loopedNumber) {
   if (loopedNumber % 15 === 0) {
     return "pingpong";
@@ -33,6 +33,7 @@ var pingPongLoop = function(number) {
   return resultArray;
 };
 
+// runs a number through the sieve and checks if it's inside the resulting array to evaluate whether or not it's prime.
 var primes = function(number) {
   if (contains(sieve(number), number)) {
     return true;
@@ -41,6 +42,7 @@ var primes = function(number) {
   }
 };
 
+// checks to see if the second input is an element inside the first.
 var contains = function(array, number) {
   for (var index = 0; index < array.length; index += 1) {
     if (array[index] === number) {
@@ -50,6 +52,7 @@ var contains = function(array, number) {
   return false;
 }
 
+// returns an array of all prime numbers up to an input number by filling the array with all numbers between 2 and the number, then removing factors.
 var sieve = function(number) {
   var allNumbers = []
   for (var i = 2; i <= number; i +=1) {
