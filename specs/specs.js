@@ -24,10 +24,10 @@ describe ('pingPongLoop', function() {
 
 describe ('primes', function() {
   it("will return false if number is not prime", function () {
-    expect(prime(22)).to.equal(false);
+    expect(primes(22)).to.equal(false);
   });
   it("will return true if number is prime", function () {
-    expect(prime(23)).to.equal(true);
+    expect(primes(23)).to.equal(true);
   });
 });
 
@@ -40,3 +40,9 @@ describe ('contains', function() {
     expect(contains([1, 2, 3, 4], 3)).to.equal(true);
   });
 })
+
+describe ('sieve', function() {
+  it("will give array of all primes up to number", function () {
+    expect(sieve(22)).to.eql([2, 3, 5, 7, 11, 13, 17, 19]);
+  });
+});

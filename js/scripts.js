@@ -27,8 +27,8 @@ var pingPongLoop = function(number) {
   return resultArray;
 };
 
-var prime = function(number) {
-  if (1 === 1) {
+var primes = function(number) {
+  if (contains(sieve(number))) {
     return true;
   } else {
     return false;
@@ -42,6 +42,24 @@ var contains = function(array, number) {
     }
   }
   return false;
+}
+
+var sieve = function(number) {
+  var allNumbers = []
+  for (var i = 2; i <= number; i +=1) {
+    allNumbers.push(i);
+  }
+  allNumbers.forEach(function(prime) {
+    allNumbers.forEach(function(remove) {
+      if (remove % prime === 0 && remove !== prime) {
+        var index = allNumbers.indexOf(remove);
+        if (index > -1) {
+          allNumbers.splice(index, 1);
+        } else {}
+      } else {}
+    });
+  });
+  return allNumbers;
 }
 // Front end code. Gets the user input and runs that number through pingPongLoop, printing each item in the resulting array as a list item.
 $(document).ready(function() {
