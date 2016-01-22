@@ -24,6 +24,19 @@ describe ('pingPongLoop', function() {
 
 describe ('primes', function() {
   it("will return false if number is not prime", function () {
-    expect(prime(22)).to.eql(false);
+    expect(prime(22)).to.equal(false);
+  });
+  it("will return true if number is prime", function () {
+    expect(prime(23)).to.equal(true);
   });
 });
+
+
+describe ('contains', function() {
+  it("will return false if array does not contain the input", function () {
+    expect(contains([1, 2, 3, 4], 5)).to.equal(false);
+  });
+  it("will return true if array does not contain the input", function () {
+    expect(contains([1, 2, 3, 4], 3)).to.equal(true);
+  });
+})
