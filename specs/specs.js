@@ -8,4 +8,7 @@ describe ('pingPong', function () {
   it("will return 'pong' if the input number is evenly divisble by 5", function () {
     expect(pingPong(10)).to.equal("pong");
   });
+  it("will return 'pingpong' if the input number is evenly divisble by 3 and 5", function () {
+    expect(pingPong(15)).to.equal("pingpong");
+  });
 });
